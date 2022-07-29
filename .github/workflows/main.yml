@@ -23,4 +23,4 @@ jobs:
           body: file://result.html
           to: literature2022@aliyun.com
           from: GitHub Actions
-          content_type: text/html
+          content_type: html
