@@ -9,7 +9,7 @@ jobs:
       - name: 'Checkout codes'
         uses: actions/checkout@v1
       - name: 'Get Page'
-        run:  echo "$(curl https://cn.nytimes.com/)" >> result.html
+        run:  echo "$(curl https://tophub.today)" >> result.html
       - name: 'Get Date'
         run: echo "REPORT_DATE=$(TZ=':Asia/Beijing' date '+%Y-%m-%d %T')" >> $GITHUB_ENV
       - name: 'Send mail'
