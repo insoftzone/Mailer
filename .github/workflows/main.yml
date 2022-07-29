@@ -20,7 +20,6 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: Page Result (${{env.REPORT_DATE}})
-          body: file://result.html
+          html_body: file://result.html
           to: literature2022@aliyun.com, insoftzone@126.com
           from: GitHub Actions
-          content_type: html_body
