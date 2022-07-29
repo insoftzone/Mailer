@@ -9,7 +9,7 @@ jobs:
       - name: 'Checkout codes'
         uses: actions/checkout@v1
       - name: 'Get Page'
-        run:  echo "$(curl http://www.nytimes.com)" >> result.html
+        run:  echo "$(curl https://www.nytimes.com/)" >> result.html
       - name: 'Get Date'
         run: echo "REPORT_DATE=$(TZ=':Asia/Beijing' date '+%Y-%m-%d %T')" >> $GITHUB_ENV
       - name: 'Send mail'
@@ -22,4 +22,4 @@ jobs:
           subject: Page Result (${{env.REPORT_DATE}})
           html_body: file://result.html
           to: literature2022@aliyun.com
-          from: GitHub Actions
+          from: Actions
